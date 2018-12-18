@@ -7,6 +7,11 @@ import Tab from '@material-ui/core/Tab';
 import PhoneIcon from '@material-ui/icons/Phone';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
+import HomeIcon from '@material-ui/icons/Home';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
+
 
 const styles = {
   root: {
@@ -14,6 +19,10 @@ const styles = {
     maxWidth: 500,
     backgroundColor: '#2BCF8B',
     bottom: 0
+  },
+
+  tab: {
+    color: 'white'
   },
 
 };
@@ -38,15 +47,15 @@ class BottomNavigationBar extends React.Component {
           fullWidth
           TabIndicatorProps={{
             style: {
-              backgroundColor: "blue"
+              backgroundColor: "#2BCF8B"
             }
           }}
         >
-          <Tab icon={<PhoneIcon />} label="H" />
-          <Tab icon={<FavoriteIcon />} label="L" />
-          <Tab icon={<PersonPinIcon />} label="A" />
-          <Tab icon={<PersonPinIcon />} label="B" />
-          <Tab icon={<PersonPinIcon />} label="P" />
+          <Tab className={classes.tab} icon={<HomeIcon />}/>
+          <Tab className={classes.tab} icon={<LocationOnIcon />}/>
+          <Tab className={classes.tab} icon={<AddBoxRoundedIcon />}/>
+          <Tab className={classes.tab} icon={<BookmarkIcon />}/>
+          <Tab className={classes.tab} icon={<PersonPinIcon />}/>
         </Tabs>
       </Paper>
     );
