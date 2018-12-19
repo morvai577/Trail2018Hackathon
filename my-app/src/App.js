@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link, Route, BrowserRouter, Switch } from "react-router-dom";
-import { AppBar, Toolbar, Typography, BottomNavigation } from "@material-ui/core/";
+import { Link } from "react-router-dom";
+import { AppBar, Toolbar, Typography } from "@material-ui/core/";
 import './App.css';
 import { withStyles } from '@material-ui/core/styles';
 import Compass from './components/Compass';
@@ -27,12 +27,6 @@ const styles = {
   },
 
 };
-
-function AppContainer({ children }) {
-  return (
-      {children}
-  );
-}
 
 class App extends Component {
 
@@ -71,7 +65,8 @@ class App extends Component {
               }}
             >
               <Tab className={classes.tab} icon={<HomeIcon />}/>
-              <Tab className={classes.tab} icon={<LocationOnIcon />}/>
+              <Tab className={classes.tab} icon={<LocationOnIcon />} component={Link}
+                  to="/map"/>
               <Tab className={classes.tab} icon={<AddBoxRoundedIcon />}/>
               <Tab className={classes.tab} icon={<BookmarkIcon />}/>
               <Tab className={classes.tab} icon={<PersonPinIcon />}/>
