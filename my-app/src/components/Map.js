@@ -54,21 +54,22 @@ class Map extends Component {
         </div>
         <div>
         </div>
-        <div style={{position: 'fixed', bottom: '0', width: '100vw' }}>
+        <div style={{ position: 'fixed', bottom: '0', width: '100vw' }}>
           <Paper square className={classes.root}>
-            <Tabs value={this.state.value} onChange={this.handleChange} fullWidth TabIndicatorProps={{style: {
+            <Tabs value={this.state.value} onChange={this.handleChange} fullWidth TabIndicatorProps={{
+              style: {
                 backgroundColor: "#2BCF8B"
-                }
-              }}
+              }
+            }}
             >
-              <Tab className={classes.tab} icon={<HomeIcon />} component={Link} to="/"/>
+              <Tab className={classes.tab} icon={<HomeIcon />} component={Link} to="/" />
               <Tab className={classes.tab} icon={<LocationOnIcon />} component={Link}
-                  to="/map"/>
-              <Tab className={classes.tab} icon={<AddBoxRoundedIcon />}/>
-              <Tab className={classes.tab} icon={<BookmarkIcon />}/>
-              <Tab className={classes.tab} icon={<PersonPinIcon />}/>
+                to="/map" />
+              <Tab className={classes.tab} icon={<AddBoxRoundedIcon />} />
+              <Tab className={classes.tab} icon={<BookmarkIcon />} />
+              <Tab className={classes.tab} icon={<PersonPinIcon />} />
             </Tabs>
-            </Paper>
+          </Paper>
         </div>
       </div>
     );
