@@ -84,7 +84,9 @@ class Compass extends Component {
 
         // Call the function to use the data on the page.
         // Roep de functie op om de data op de pagina te gebruiken.
-        deviceOrientationHandler(tiltLR, tiltFB, dir);
+        if (document.getElementById("compassDiscImg") != null) { // need this, please don't delete
+          deviceOrientationHandler(tiltLR, tiltFB, dir);
+        }
       }, false);
     }
 
