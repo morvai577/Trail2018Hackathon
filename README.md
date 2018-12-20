@@ -1,1 +1,0 @@
-# Trail2018Hackathon
