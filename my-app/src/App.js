@@ -8,6 +8,7 @@ import BottomNavBar from './components/BottomNavigation';
 import { Paper } from '@material-ui/core';
 import SponsorImg from './img/Compass/Sponsord.svg'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import CompassBg from './img/Compass/Compass-Bg.svg';
 
 const styles = {
   root: {
@@ -37,10 +38,10 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <AppBar/>
         <div onClick={ event => this.handleClick(event)}>
           <Compass/>
         </div>
+        <img className='Center BgImg _compass' src={CompassBg} /> 
         <Paper className='SponsorDiv'>
           <img src={SponsorImg}/>
         </Paper>

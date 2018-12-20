@@ -107,9 +107,7 @@ class Compass extends Component {
     return (
       <div>
           <Container fluid={true}>
-            <div className={classes.pointsContainer}>
-                <img src={Score} />
-            </div>
+      
             <div className={classes.compass} >
               <img id="compassDiscImg" className={classes.disc} src={CompassImg} />
             </div>

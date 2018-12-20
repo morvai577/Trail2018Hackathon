@@ -7,6 +7,11 @@
   top: 0;
   z-index: -1;
 }
+
+.BgImg._compass{
+  width:100%;
+  top: 12px;
+}
 .Margin-Top{
   margin-top: 36px;
 }
@@ -55,9 +60,13 @@
 .App-link {
   color: #61dafb;
 }
-
+.Enter {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 48px;
+}
 .SponsorDiv{
-  padding: 12px 0px;
   overflow: auto;
   position: fixed;
   bottom: 48px;
