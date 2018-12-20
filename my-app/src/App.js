@@ -8,7 +8,6 @@ import BottomNavBar from './components/BottomNavigation';
 import { Paper } from '@material-ui/core';
 import SponsorImg from './img/Compass/Sponsord.svg'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { Link } from "react-router-dom";
 
 const styles = {
   root: {
@@ -23,30 +22,23 @@ const theme = createMuiTheme({
   },
 });
 
+
 class App extends Component {
 
   state = {
     value: 0,
   };
 
-  componentDidMount() {
-    console.log('Will go to node route after 10 seconds');
-    // Start counting when the page is loaded
-    this.timeoutHandle = setTimeout(() => {
-      // Add your logic for the transition
-      this.props.history.push('/node')
-    }, 10000);
-  }
-
-  componentWillUnmount(){
-    clearTimeout(this.timeoutHandle); // This is just necessary in the case that the screen is closed before the timeout fires, otherwise it would cause a memory leak that would trigger the transition regardless, breaking the user experience.
+  async handleClick(e) {
+    let path = `/node`;
+    this.props.history.push(path);
   }
 
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <AppBar />
-        <div>
+        <AppBar/>
+        <div onClick={ event => this.handleClick(event)}>
           <Compass/>
         </div>
         <Paper className='SponsorDiv'>

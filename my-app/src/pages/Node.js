@@ -20,6 +20,11 @@ class Node extends Component {
     value: 0,
   };
 
+  async handleClick(e) {
+    let path = `https://dazzling-beaver-5ca368.netlify.com/`;
+    window.location.href = path;
+  }
+
   render() {
     return (
       <MuiThemeProvider theme={theme}>
@@ -27,7 +32,7 @@ class Node extends Component {
         <div className='MainBody'>
           <img className="Score" src={Coin}/>
           <img className="Center FullMaxWidth Compass" src={Compass}/>
-          <img className="Center FullMaxWidth" src={Enter}/>
+          <img className="Center FullMaxWidth" src={Enter} onClick={ event => this.handleClick(event)}/>
         </div>
         <BottomNavBar value='1' />
       </MuiThemeProvider>
