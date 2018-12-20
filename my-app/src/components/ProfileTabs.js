@@ -3,7 +3,9 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { withStyles } from '@material-ui/core/styles';
-import { Typography } from '@material-ui/core';
+import List from '@material-ui/icons/List';
+import Shop from '@material-ui/icons/ShoppingBasket';
+import Location from '@material-ui/icons/LocationOn';
 
 const styles = {
   Paper: {
@@ -12,7 +14,7 @@ const styles = {
     position: 'relative',
   },
   Tab: {
-    width: '50%',
+    width: '33.333%',
     padding: '14px',
   },
 };
@@ -36,8 +38,9 @@ class ActivityTabs extends React.Component {
           textColor="primary"
           onChange={this.handleChange}
         >
-          <Tab className={classes.Tab} label="My Posts" value='My Posts' />
-          <Tab className={classes.Tab} label="My Places" value='My Places' />
+          <Tab className={classes.Tab} icon={<List />} value='My Posts' />
+          <Tab className={classes.Tab} icon={<Location />} value='My Places' />
+          <Tab className={classes.Tab} icon={<Shop />} value='Shop' />
         </Tabs>
       </Paper>
     );

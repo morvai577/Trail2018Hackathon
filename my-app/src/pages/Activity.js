@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import AcivitytTabs from '../components/AcivitytTabs';
 import BottomNavBar from '../components/BottomNavigation';
 import ActivityThread from '../img/Activity/Activity.svg';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#2196F3' },
+    secondary: { main: '#FFC107' }, 
+  },
+});
 
 class Activity extends Component {
 
@@ -11,7 +20,7 @@ class Activity extends Component {
 
   render() {
     return (
-      <div>
+      <MuiThemeProvider theme={theme}>
        <AcivitytTabs value='My Places' />
         <div className='MainBody'>
         <div className='MainBodyInner'>
@@ -19,7 +28,7 @@ class Activity extends Component {
         </div>
         </div>
         <BottomNavBar value='4' />
-      </div>
+      </MuiThemeProvider>
     );
   }
 }

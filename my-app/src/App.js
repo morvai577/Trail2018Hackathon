@@ -7,12 +7,20 @@ import AppBar from './components/AppBar';
 import BottomNavBar from './components/BottomNavigation';
 import { Paper } from '@material-ui/core';
 import SponsorImg from './img/Compass/Sponsord.svg'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const styles = {
   root: {
     
   },
 };
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#2196F3' },
+    secondary: { main: '#FFC107' }, 
+  },
+});
 
 class App extends Component {
 
@@ -22,7 +30,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <MuiThemeProvider theme={theme}>
         <AppBar />
         <div>
           <Compass/>
@@ -31,7 +39,7 @@ class App extends Component {
           <img src={SponsorImg}/>
         </Paper>
         <BottomNavBar value='1' />
-      </div>
+      </MuiThemeProvider>
     );
   }
 }

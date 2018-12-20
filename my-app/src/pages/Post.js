@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import AppBar from '../components/AppBar';
+import PostImg from '../img/Post/Post.svg';
 import BottomNavBar from '../components/BottomNavigation';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#2196F3' },
+    secondary: { main: '#FFC107' }, 
+  },
+});
 
 class Post extends Component {
 
@@ -10,13 +18,12 @@ class Post extends Component {
 
   render() {
     return (
-      <div>
-        <AppBar />
+      <MuiThemeProvider theme={theme}>
         <div>
-          <h1>Post</h1>
+         <img className='Center FullMaxWidth' src={PostImg}/>
         </div>
         <BottomNavBar value='3' />
-      </div>
+      </MuiThemeProvider>
     );
   }
 }

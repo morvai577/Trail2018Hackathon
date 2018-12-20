@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import BottomNavBar from '../components/BottomNavigation';
 import MapBackground from '../img/Map/Map.png';
 import Search from '../img/Map/Search.svg';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#2196F3' },
+    secondary: { main: '#FFC107' }, 
+  },
+});
 
 class Map extends Component {
 
@@ -11,7 +19,7 @@ class Map extends Component {
 
   render() {
     return (
-      <div>
+      <MuiThemeProvider theme={theme}>
         <div className='MainBody alt'>
         <div className='Fixed'>
           <img className='Center FullMaxWidth' src={Search} />
@@ -19,7 +27,7 @@ class Map extends Component {
           <img className='Center' src={MapBackground}/>
         </div>
         <BottomNavBar value='2' />
-      </div>
+      </MuiThemeProvider>
     );
   }
 }
