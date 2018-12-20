@@ -28,6 +28,11 @@ class ActivityTabs extends React.Component {
     this.setState({ value });
   };
 
+  handleClick = (ID) => {
+    for (let el of document.querySelectorAll('.ProfileTab')) el.style.display = 'none';
+    document.getElementById(ID).style.display = "block";
+  }
+
   render() {
     const { classes } = this.props;
     return (
@@ -38,9 +43,9 @@ class ActivityTabs extends React.Component {
           textColor="primary"
           onChange={this.handleChange}
         >
-          <Tab className={classes.Tab} icon={<List />} value='My Posts' />
-          <Tab className={classes.Tab} icon={<Location />} value='My Places' />
-          <Tab className={classes.Tab} icon={<Shop />} value='Shop' />
+          <Tab onClick={(e) => this.handleClick('MyPosts', e)} className={classes.Tab} icon={<List />} value='My Posts' />
+          <Tab onClick={(e) => this.handleClick('MyPlaces', e)} className={classes.Tab} icon={<Location />} value='My Places' />
+          <Tab onClick={(e) => this.handleClick('Shop', e)} className={classes.Tab} icon={<Shop />} value='Shop' />
         </Tabs>
       </Paper>
     );

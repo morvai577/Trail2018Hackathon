@@ -9,8 +9,9 @@ const styles = {
 
   compass: {
     padding: '0px 56px',
+    paddingTop: '100px',
     position: 'absolute',
-    left: '0', right: '0', top: '160px', bottom: '0',
+    left: '0', right: '0', top: '56px', bottom: '0',
     margin: 'auto',
 	  overflow: 'hidden',
   },

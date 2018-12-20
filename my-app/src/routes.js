@@ -5,6 +5,7 @@ import Map from "./pages/Map";
 import Profile from "./pages/Profile";
 import Post from "./pages/Post";
 import Activity from "./pages/Activity";
+import Node from "./pages/Node";
 
 export const AppRouter = () => {
   return (
@@ -16,6 +17,7 @@ export const AppRouter = () => {
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/post" component={Post} />
           <Route exact path="/activity" component={Activity} />
+          <Route exact path="/node" component={Node} />
         </main>
       </div>
     </BrowserRouter>
