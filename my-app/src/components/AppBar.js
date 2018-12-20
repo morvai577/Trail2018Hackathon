@@ -5,7 +5,7 @@ import Logo from '../img/General/Header.svg';
 class MainAppBar extends Component {
   render() {
     return (
-          <AppBar position="static" color="default">
+          <AppBar position="static" color="white">
             <Toolbar>
               <img className='Center' src={Logo}/>
             </Toolbar>

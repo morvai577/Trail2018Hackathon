@@ -13,7 +13,7 @@ class Post extends Component {
       <div>
         <AppBar />
         <div>
-          
+          <h1>Post</h1>
         </div>
         <BottomNavBar value='3' />
       </div>

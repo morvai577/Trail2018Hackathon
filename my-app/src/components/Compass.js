@@ -1,33 +1,22 @@
 import React, { Component } from 'react';
 import { Typography } from "@material-ui/core/";
 import { Container } from "reactstrap";
-import ExploreIcon from '@material-ui/icons/Explore';
-import DataUsageIcon from '@material-ui/icons/DataUsage'
 import { withStyles } from '@material-ui/core/styles';
+import CompassImg from '../img/Compass/Compass.svg'
+import Score from '../img/Compass/Score.svg'
 
 const styles = {
 
   compass: {
-    color: '#2BCF8B',
-    width: '300px',
-    height: '300px',
+    padding: '0px 56px',
     position: 'absolute',
-    left: '0', right: '0', top: '0', bottom: '0',
+    left: '0', right: '0', top: '160px', bottom: '0',
     margin: 'auto',
-    background: '#222',
-    borderRadius: '40px',
-	  border: '5px solid #444',
 	  overflow: 'hidden',
   },
 
   disc: {
-    position: 'absolute',
-	  left: '0', right: '0', top: '0', bottom: '0',
-	  zIndex: '200',
-	  background: "url('http://dev.rvltn.eu/compass/compass.svg')",
-    width: '300px',
-    height: '300px',
-	  backgroundSize: '100%'
+    width: '100%',
   },
 
   arrow: {
@@ -43,8 +32,8 @@ const styles = {
   pointsContainer: {
     position: 'absolute',
     textAlign: 'center',
-    top: '60px',
-    right: '5px',
+    top: '68px',
+    right: '12px',
   },
 
   points: {
@@ -116,12 +105,10 @@ class Compass extends Component {
       <div>
           <Container fluid={true}>
             <div className={classes.pointsContainer}>
-                <DataUsageIcon className={classes.points}/>
-                <Typography className={classes.pointsText} variant="h6" gutterBottom>67</Typography>
+                <img src={Score} />
             </div>
-            <div className={classes.compass}>
-              <div className={classes.arrow}></div>
-              <div id="compassDiscImg" className={classes.disc}></div>
+            <div className={classes.compass} >
+              <img id="compassDiscImg" className={classes.disc} src={CompassImg} />
             </div>
            </Container>
       </div>

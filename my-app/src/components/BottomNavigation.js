@@ -15,8 +15,10 @@ const styles = {
     background: 'linear-gradient(77.49deg, rgba(210, 167, 191, 0.06) -1.27%, rgba(255, 255, 255, 0) 12.56%), linear-gradient(259.8deg, rgba(16, 43, 88, 0.5) 0.76%, rgba(95, 95, 135, 0.5) 94.35%), #0B1927',
     position: 'fixed', 
     bottom: '0px',
+    minWidth: '100%',
   },
   Tab: {
+    width: '20%',
     color: 'white'
   },
 };

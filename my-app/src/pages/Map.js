@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import AppBar from '../components/AppBar';
 import BottomNavBar from '../components/BottomNavigation';
+import MapBackground from '../img/Map/Map.png';
+import Search from '../img/Map/Search.svg';
 
 class Map extends Component {
 
@@ -11,9 +12,11 @@ class Map extends Component {
   render() {
     return (
       <div>
-        <AppBar />
-        <div>
-          
+        <div className='MainBody alt'>
+        <div className='Fixed'>
+          <img className='Center FullMaxWidth' src={Search} />
+        </div>
+          <img className='Center' src={MapBackground}/>
         </div>
         <BottomNavBar value='2' />
       </div>

@@ -1,10 +1,10 @@
 import * as React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import App from "./App";
-import Map from "./Pages/Map";
-import Profile from "./Pages/Profile";
-import Post from "./Pages/Post";
-import Activity from "./Pages/Activity";
+import Map from "./pages/Map";
+import Profile from "./pages/Profile";
+import Post from "./pages/Post";
+import Activity from "./pages/Activity";
 
 export const AppRouter = () => {
   return (
